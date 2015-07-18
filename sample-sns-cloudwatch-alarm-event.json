@@ -1,0 +1,22 @@
+{
+	"Records": [
+		{
+			"EventSource": "aws:sns",
+			"EventVersion": "1.0",
+			"EventSubscriptionArn": "arn:aws:sns:us-east-1:818972891940:test:e3e9cae1-f31d-4ccf-bc22-9eb79905396c",
+			"Sns": {
+				"Type": "Notification",
+				"MessageId": "37a4c348-3dc7-5e43-ab94-8d6c837876a5",
+				"TopicArn": "arn:aws:sns:us-east-1:818972891940:test",
+				"Subject": "ALARM: \"Test billing alarm\" in US - N. Virginia",
+				"Message": "{\"AlarmName\":\"Test billing alarm\",\"AlarmDescription\":\"Test billing alarm description\",\"AWSAccountId\":\"818972891940\",\"NewStateValue\":\"ALARM\",\"NewStateReason\":\"Threshold Crossed: 1 datapoint (0.0) was less than or equal to the threshold (1.0).\",\"StateChangeTime\":\"2015-07-18T20:52:15.795+0000\",\"Region\":\"US - N. Virginia\",\"OldStateValue\":\"INSUFFICIENT_DATA\",\"Trigger\":{\"MetricName\":\"EstimatedCharges\",\"Namespace\":\"AWS/Billing\",\"Statistic\":\"MAXIMUM\",\"Unit\":null,\"Dimensions\":[{\"name\":\"Currency\",\"value\":\"USD\"}],\"Period\":21600,\"EvaluationPeriods\":1,\"ComparisonOperator\":\"LessThanOrEqualToThreshold\",\"Threshold\":1.0}}",
+				"Timestamp": "2015-07-18T20:52:15.846Z",
+				"SignatureVersion": "1",
+				"Signature": "hLQSfIzzRx3eLBf/Z+hA914uc0xK76Os4VnrVX3IyQamKqTjN/p/QblnQ6un/A26ZlYU0tJAsO79dWP41Av+VoBdp4BS86iHz92BN3a2vB58cYac2R9jfbwVUvFhLWGOAGq3n4kcUKwrxSk1kKzZVjlhh/smJz+akqTs+KTvcDAq2Houxzr7JR1kaluZJhLDeedKQGrROkGZqcRD1gJ6m30GOXUqVhwyPfbDYfNtya1RvSbSGaC84oGRaIJ2fYmnBNM7vFXhq0n4ZHtvJ6xMvwfHFX8XfQ+vjwSauQvl0sfldIKP6GuDN+iSKlxv989TRRg0NC+rllOns93UFgN70g==",
+				"SigningCertUrl": "https://sns.us-east-1.amazonaws.com/SimpleNotificationService-d6d679a1d18e95c2f9ffcf11f4f9e198.pem",
+				"UnsubscribeUrl": "https://sns.us-east-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-1:818972891940:test:e3e9cae1-f31d-4ccf-bc22-9eb79905396c",
+				"MessageAttributes": {}
+			}
+		}
+	]
+}
