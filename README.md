@@ -33,6 +33,35 @@ Unfortunately this is a ui driven process
 	--alarm-actions arn:aws:sns:us-east-1:111122223333:Billing
 ```
 
-Concept heavily borrowed from
+## Create the aws lambda function
+```
+> aws lambda create-function \
+	--function-name snsToSlack \
+	--zip-file file://file-path/snsToSlack-created-from-snsToSlack.js.zip \
+	--role role-arn-looked-up-from-iam \
+	--handler index.handler \
+	--runtime nodejs
+{
+    "CodeSize": number,
+    "Description": "string",
+    "FunctionArn": "string",
+    "FunctionName": "string",
+    "Handler": "string",
+    "LastModified": "string",
+    "MemorySize": number,
+    "Role": "string",
+    "Runtime": "string",
+    "Timeout": number
+}
+```
 
+## Subscribe to lambda function to the sns topic
+```
+> aws sns subscribe \
+    --topic-arn arn:aws:sns:us-east-1:111122223333:Billing \
+    --protocol lambda \
+    --notification-endpoint arn:aws:lambda:REGION:ACCOUNT:function:LAMBDAFUNCTION
+```
+
+#### Concept heavily borrowed from
 https://medium.com/cohealo-engineering/how-set-up-a-slack-channel-to-be-an-aws-sns-subscriber-63b4d57ad3ea
